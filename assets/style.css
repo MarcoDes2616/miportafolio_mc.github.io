@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+:root{
+    --primaryC: #00BCD4;
+    --primaryCL: #B2EBF2;
+    --primaryCD: rgb(0, 151, 167);
+    --ascentcolor: #CDDC39;
+    --textPrimary: #212121;
+    --textSecondary: #757575;
+    --icon: #FFFFFF;
+    --divideC: #BDBDBD;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: Montserrat;
+    font-size: 16px;
+    background-color: var(--primaryCD);
+}
+
+header{
+    position: relative;
+    padding: 30px 0 25px 0;
+    box-shadow: 0px 8px 6px rgb(56, 84, 95);
+    background-image: url(./background/background.png);
+    background-size: cover;
+}
+
+/*** MENU HAMBURGER ***/
+.menu_h{
+    border: 2px solid var(--primaryCL);
+    width: 3rem;
+    height: 3.3rem;
+    border-radius: 50% 0 0 50%;
+    padding: 0;
+    background-color: var(--ascentcolor);
+    z-index: 999;
+    position: fixed;
+    bottom: 18vh;
+    right: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu_h span{
+    display: block;
+    background-color: #f3f3f3;
+    height: 4px;
+    width: 2rem;
+    margin: 3px auto;
+    border-radius: 2px;
+    border: 1px solid var(--primaryCD);
+    transition: 0.5s 0.1s;
+}
+.menu_h:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+.panel{
+    position: fixed;
+    z-index: 998;
+    background-color: var(--primaryCD);
+    border-radius: 1.6rem 0 0 1.6rem;
+    width: 90%;
+    height: 3.3rem;
+    bottom: 18vh;
+    right: 1.7rem;
+    border: 2px solid var(--ascentcolor);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    max-width: 400px;
+    transition: transform 0.7s ease;
+    transform: translate(100%, 0);
+}
+.panel.active{
+    transition: transform 0.7s ease;
+    transform: translate(0, 0);
+}
+.br-1.animado{
+    transform: rotate(-45deg) translate(-6px, 8px);
+}
+.br-2.animado{
+    opacity: 0;
+}
+.br-3.animado{
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+nav a{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    color: #212121;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+.hr_a{
+    height: 3px;
+    background-color: #CDDC39;
+    width: 100%;
+}
+/** FIN MENU **/
+
+/*** PRESENTACION ****/
+.circle{
+    background-color: var(--primaryCL);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 4px 4px 5px var(--textPrimary);
+}
+.circle img{
+    display: block;
+    margin: 0 auto;
+    height: 102%;
+}
+.presentation{
+    width: 280px;
+    margin: 20px auto;
+}
+h1{
+    font-size: 20px;
+    filter: drop-shadow(1px 1px 1px var(--primaryCL));
+}
+span{
+    color: var(--ascentcolor);
+    font-size: 38px;
+}
+h2, h3{
+    font-size: 19px;
+    margin-top: 15px;
+    filter: drop-shadow(1px 1px 1px var(--primaryCL));
+}
+hr{
+    height: 5px;
+    background-color: var(--divideC);
+    border: 1px solid var(--primaryCL);
+    border-radius: 3px;
+}
+.rrss{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    padding: 12px 0;
+    margin: 0 auto;
+}
+.rrss div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--ascentcolor);
+    border-radius: 50% 0 50% 50%;
+    filter: drop-shadow(3px 3px 1px var(--textPrimary));
+}
+.icon{
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+}
+.git{
+    width: 100%;
+    height: 100%;
+}
+.jobs{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: var(--primaryCL);
+    margin: 10px auto;
+    width: 95%;
+    border-radius: 5px;
+    max-width: 500px;
+    padding: 1rem 1.2rem;
+    box-shadow: 4px 4px 5px var(--textPrimary);
+}
+.jobs div{
+    margin: 0;
+    width: 27%;
+    max-width: 105px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.jobs div img{
+    width: 75%;
+    max-width: 65px;
+    object-fit: contain;
+}
+
+.jobs div h6{
+    margin: 0;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--textPrimary);
+}
+/** FIN PRESENTATION **/
+
+/** MAIN **/
+.cintillo{
+    width: 100%;
+    background-image: url(./background/background.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: repeat-x;
+    border-top: 1px solid var(--primaryCL);
+}
+.cintillo h3{
+    color: #CDDC39;
+    font-size: 25px;
+    filter: none;
+    text-align: center;
+    padding: 0 0 12px 0;
+}
+.section{
+    padding-bottom: 20px;
+}
+/** SECCION 1... ACERCA DE MI **/
+.section{
+    width: 100%;
+}
+#section1{
+    background: url(./iconos/student-ge81f3a0ec_1920.jpg);
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.about{
+    background-color: hsla(193, 78%, 82%, 0.65);
+    width: 100%;
+    padding: 10px 15px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about *{
+    font-size: 1.1rem;
+    max-width: 700px;
+}
+.about h3{
+    color: var(--primaryCD);
+    margin-bottom: 20px;
+}
+.about p{
+    line-height: 21px;
+    filter: drop-shadow(1px 1px 1px var(--primaryCL));
+    margin-bottom: 20px;
+}
+.curriculo{
+    width: 300px;
+    border: 1px solid var(--primaryCL);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 2px 3px var(--primaryCD);
+    background-image: url(./background/background.png);
+    background-position: center;
+}
+.btn_descarga{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    background-color: var(--primaryCL);
+    border-radius: 14px;
+    position: relative;
+}
+.btn_descarga p{
+    position: absolute;
+    color: var(--textPrimary);
+    filter: none;
+    top: 0px;
+}
+.btn_descarga img{
+    margin-top: 18px;
+}
+/** SECCION 2... SERVICIOS **/
+#section2{
+    position: relative;
+    background-color: var(--primaryCD);
+    box-shadow: 0px -8px 6px rgb(56, 84, 95);
+    text-align: center;
+}
+.services{
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1rem;
+    width: 100%;
+}
+.services.end{
+    justify-content: end;
+}
+.services article{
+    margin: 0 1rem;
+    min-width: 170px;
+    width: 200px;
+    height: 260px;
+    background-color: var(--icon);
+    border-radius: .25rem;
+    margin: 5px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    gap: .6rem;
+    text-align: center;
+    box-shadow: 6px 6px var(--primaryCL);
+}
+.services article img{
+    width: 80%;
+    height: auto;
+}
+.services article h6{
+    font-size: 12px;
+}
+.services article p{
+    width: 150px;
+}
+#arrow-f, #arrow-b{
+    width: 50px;
+    height: 50px;
+    background-color: #ccdc399a;
+    border-radius: 50%;
+    position: absolute;
+    top: 204px;
+    display: flex;
+    align-items: center;
+}
+.arrow_f{
+    right: 5px;
+}
+.arrow_b{
+    left: -100px;
+}
+.arrow_f.none{
+    right: -100px;
+}
+.arrow_b.none{
+    left: 5px;
+}
+
+/** HABILIDADES **/
+.hab_contenedor{
+    padding: 20px 0;
+}
+.hab_rate{
+    padding: 25px;
+    width: 92%;
+    margin: 35px auto 10px auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+.hab_rate h3{
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--primaryCD);
+}
+.hab_rate *{
+    color: var(--textPrimary);
+    font-size: 16px;
+    margin-bottom: 4px;
+    padding: 0 3px;
+}
+.hab_rate h4 span{
+    float: right;
+}
+.hab_rate p{
+    font-size: 10px;
+}
+.hab_rate p *{
+    font-size: 12px;
+    font-weight: 600;
+}
+.habilidad{
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    border-radius: 4.5px;
+    margin-bottom: 25px;
+}
+.rate{
+    height: 10px;
+    background-color: #CDDC39;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 3px var(--textPrimary);
+}
+.rate11{
+    width: 90%;
+}
+.rate12{
+    width: 90%;
+}
+.rate13{
+    width: 80%;
+}
+.rate14{
+    width: 70%;
+}
+.rate21{
+    width: 85%;
+}
+.rate22{
+    width: 75%;
+}
+.rate23{
+    width: 96%;
+}
+.rate24{
+    width: 75%;
+}
+
+/** PORTAFOLIO **/
+.port_contain{
+    margin: 20px 15px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+
+}
+.port{
+    width: 40vw;
+    max-width: 250px;
+}
+.port img{
+    width: 95%;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px 0 var(--textPrimary);
+}
+.port *{
+    font-size: 13px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/** CONTACTO **/
+.cont_contain{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+.contacto{
+    width: 180px;
+    height: 180px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.contacto img{
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+.contacto p{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--textPrimary);
+}
+
+
+/**** @MEDIA ****/
+
+@media screen and (min-width: 900px){
+    /** HEADER **/
+    header{
+        padding: 0;
+        background-size: contain;
+    }
+
+    /** HEADER: MENU **/
+    .panel{
+        position: static;
+        background-color: var(--primaryCD);
+        border-radius: 0rem;
+        border: 0;
+        border-bottom: 2px double var(--primaryCL);
+        max-width: 100%;
+        width: 100%;
+        height: 3.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0, 0);
+        margin-bottom: 50px;
+    }
+    .panel nav{
+        display: flex;
+        max-width: 700px;
+        margin: 10px 0;
+    }
+    .panel nav a{
+        color: white;
+        display: block;
+        text-align: left;
+        margin: 0 25px;
+        width: 120px;
+        --clippy: polygon(0% 0, 0 0, 0 100%, 0% 100%);
+    }
+    .panel nav a::after{
+        content: "";
+        display: block;
+        background-color: #CDDC39;
+        border-radius: 3px;
+        width: 100%;
+        margin-top: 3px auto 0 auto;
+        height: 3px;
+        clip-path: var(--clippy);
+        transition: clip-path .3s;
+        }
+    .panel nav a:hover{
+        color: var(--textPrimary);
+        --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    .hr_a{
+        display: none;
+    }
+    .menu_h{
+        display: none;
+    }
+
+    /** HEADER: PRESENTACION **/
+    .presentation{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: calc(50% - 167px);
+        left: calc(50% - 344px);
+        width: 265px;
+        margin: 0;
+    }
+    .presentation h1{
+        font-size: 25px;
+    }
+    .presentation h1 span{
+        font-size: 42px;
+    }
+    .presentation h3{
+        font-size: 18px;    
+    }
+    .rrss{
+        margin: 10px 0;
+    }
+    .circle{
+        width: 300px;
+        height: 300px;
+    }
+    .circle img{
+        height: 100%;
+    }
+    .presentation center{
+        text-align: left;
+    }
+    hr{
+        position: absolute;
+        top: 33px;
+        width: 265px;
+    }
+    h3{
+        font-size: 15px;
+    }
+
+    /** HEADER: PRESENTACION: CERTIFICAN **/
+    .jobs{
+        position: relative;
+        top: -25px;
+        max-width: 690px;
+        justify-content: space-evenly;
+    }
+    .jobs div h6{
+        font-size: 12px;
+    }
+    /** FIN HEADER **/
+
+    /** SECCIONES **/
+    .cintillo h3{
+        font-size: 25px;
+    }
+    .arrow_f{
+        right: -100px;
+    }
+
+    /** ACERCA DE MI **/
+    .about *{
+        font-size: 1.2rem;
+    }
+    .about p{
+        line-height: 25px;
+    }
+
+    /** SECCIONES: SERVICIOS **/
+    .services{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .hab_contenedor{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .hab_rate{
+        padding: 35px;
+        max-width: 45%;
+    }
+
+    /** SECCIONES: PORTAFOLIO **/
+    .port_contain{
+        margin: 20px auto;
+    }
+    .port img{
+        height: 418px;
+    }
+}
