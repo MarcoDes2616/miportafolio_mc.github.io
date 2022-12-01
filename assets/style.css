@@ -221,9 +221,8 @@ hr{
 .cintillo{
     width: 100%;
     background-image: url(./background/background.png);
-    background-position: center;
-    background-size: 60%;
-    background-repeat: repeat-x;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-top: 1px solid var(--primaryCL);
 }
 .cintillo h3{
@@ -236,6 +235,7 @@ hr{
 .section{
     padding-bottom: 20px;
 }
+
 /** SECCION 1... ACERCA DE MI **/
 .section{
     width: 100%;
@@ -351,6 +351,12 @@ hr{
     top: 204px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    fill: var(--primaryCL);
+    stroke: var(--primaryCD);
+}
+.arrow_f svg{
+    width: 75%;
 }
 .arrow_f{
     right: 5px;
@@ -366,6 +372,7 @@ hr{
 }
 
 /** HABILIDADES **/
+
 .hab_contenedor{
     padding: 20px 0;
 }
@@ -487,6 +494,7 @@ hr{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    border-radius: 10px;
 }
 .contacto img{
     width: 60%;
